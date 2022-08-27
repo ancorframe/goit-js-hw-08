@@ -70,7 +70,8 @@ module.exports = {
   // },
   output: {
     filename: "[name].[hash:5].js",
-    path: path.resolve(__dirname, "docs"),
-    publicPath: "https://github.com/ancorframe/goit-js-hw-08.git/docs/",
+    publicPath: "/goit-js-hw-08/",
+    // path: path.resolve(__dirname, "docs"),
+    // publicPath: "https://github.com/ancorframe/goit-js-hw-08.git/docs/",
   },
 };
