@@ -35,7 +35,6 @@ function updateOutput() {
   }
   const savedData = localStorage.getItem("feedback-form-state");
   formData = JSON.parse(savedData);
-  console.log(formData);
   refs.form.elements.email.value = formData.email;
   refs.form.elements.message.value = formData.message;
 }
