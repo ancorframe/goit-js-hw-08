@@ -30,11 +30,15 @@ function onFormInput(e) {
 updateOutput();
 
 function updateOutput() {
-  if (!localStorage.getItem("feedback-form-state")) {
+  const savedData = localStorage.getItem("feedback-form-state");
+
+  if (!savedData) {
     return;
   }
-  const savedData = localStorage.getItem("feedback-form-state");
   formData = JSON.parse(savedData);
-  refs.form.elements.email.value = formData.email;
-  refs.form.elements.message.value = formData.message;
+  const formDataKeys = Object.keys(formData);
+
+  for (let key of formDataKeys) {
+    refs.form.elements[key].value = formData[key];
+  }
 }
